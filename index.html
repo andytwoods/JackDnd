@@ -58,6 +58,23 @@
             color: #fff;
             text-align: right;
         }
+
+        .fade-in {
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: .5s;
+        }
+
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -76,7 +93,7 @@
 </div>
 
 <!-- Video Background Container -->
-<div class="video-container">
+<div class="video-container fade-in">
     <img src="frontpage.png" alt="image of a wizard cautiously walking up stairs in a dungeon">
     <video autoplay muted playsinline id="frontpage_video">
         <source src="frontpage_video.mp4" type="video/mp4">
